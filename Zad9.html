@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function averageWordLength(sentence) {
+            // Разбиваем предложение на слова, используя пробел как разделитель.
+            let words = sentence.split(" ");
+
+            let totalLength = 0;
+
+            // Перебираем слова и суммируем их длину.
+            for (const word of words) {
+                totalLength += word.length;
+            }
+
+            // Рассчитываем среднюю длину слова.
+            let averageLength = totalLength / words.length;
+
+            return averageLength;
+        }
+
+        // Пример использования функции:
+        let sentence = "Это предложение для расчета средней длины слова.";
+        let averageLength = averageWordLength(sentence);
+
+        alert(`Средняя длина слова в предложении: ${averageLength}`); // Выводит среднюю длину слова.
+
+    </script>
+</body>
+
+</html>

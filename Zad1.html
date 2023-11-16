@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function compareLengthStrings(str1, str2) {
+            const length1 = str1.length;
+            const length2 = str2.length;
+
+            if (length1 > length2) {
+                return 1;
+            } else if (length2 > length1) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+
+        let str1 = "Привет, мир";
+        let str2 = "Здравствуй, мир!";
+        let result = compareLengthStrings(str1, str2);
+
+        alert(result);
+    </script>
+</body>
+
+</html>

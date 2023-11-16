@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function theLongestWord(sentence) {
+            // Разбиваем предложение на слова, используя пробел как разделитель.
+            let words = sentence.split(" ");
+
+            // Инициализируем переменную для хранения самого длинного слова.
+            let theLongest = "";
+
+            // Перебираем слова в предложении и сравниваем их длину.
+            for (const word of words) {
+                if (word.length > theLongest.length) {
+                    theLongest = word;
+                }
+            }
+
+            return theLongest;
+        }
+
+        // Пример использования функции:
+        let sentence = "Это пример предложения для нахождения самого длинного слова.";
+        let longWord = theLongestWord(sentence);
+
+        alert(`Самое длинное слово в предложении: ${longWord}`); // Выводит самое длинное слово.
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function numberOfWords(sentence) {
+            // Разбиваем предложение на слова, используя пробел как разделитель.
+            let words = sentence.split(" ");
+
+            // Фильтруем слова, удаляя пустые строки (например, двойные пробелы).
+            let purifiedWords = words.filter(words => words.trim() !== "");
+
+            // Возвращаем количество слов.
+            return purifiedWords.length;
+        }
+
+        // Пример использования функции:
+        let sentence = "Это пример предложения для подсчета слов.";
+        let quantity = numberOfWords(sentence);
+
+        alert(`Количество слов в предложении: ${quantity}`); // Выводит количество слов в предложении.
+    </script>
+</body>
+
+</html>

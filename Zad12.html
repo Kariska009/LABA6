@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function numberInText(number) {
+            if (number < 10 || number > 99) {
+                return "Число не является двузначным";
+            }
+
+            let units = ["", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"];
+            let dozens = ["", "десять", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"];
+
+            let dozen = Math.floor(number / 10);
+            let unit = number % 10;
+
+            if (dozen === 1) {
+                return "десять";
+            } else {
+                return dozens[dozen] + " " + units[unit];
+            }
+        }
+
+        let number = 47;
+        let text = numberInText(number);
+
+        alert(`Число в текстовом виде: ${text}`);
+    </script>
+</body>
+
+</html>
